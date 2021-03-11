@@ -8,10 +8,13 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+import dj_database_url
+if os.path.exists('env.py'):
+    import env
 
 
 development = os.environ.get('DEVELOPMENT', False)
-
+print(f"Development is : {development}")
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
